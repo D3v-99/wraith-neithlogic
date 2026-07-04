@@ -192,6 +192,59 @@ body {
   margin-top: 6px;
 }
 
+.phone-wrap { flex-direction: column; align-items: center; gap: 18px; }
+.phone-caption {
+  color: var(--muted);
+  font-size: 13.5px;
+}
+
+/* ── industries ── */
+.industries {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 120px 32px 20px;
+}
+.industries h2 {
+  font-family: var(--serif);
+  font-weight: 550;
+  font-size: clamp(30px, 4vw, 40px);
+  letter-spacing: -0.015em;
+}
+.industries-lede {
+  color: var(--muted);
+  margin-top: 16px;
+  max-width: 540px;
+}
+.industry-list {
+  list-style: none;
+  margin-top: 44px;
+}
+.industry-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 4px;
+  border-top: 1px solid var(--line);
+}
+.industry-list li:last-child { border-bottom: 1px solid var(--line); }
+.industry-name { font-weight: 550; font-size: 16px; }
+.tag {
+  font-size: 12.5px;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  padding: 3px 12px;
+  white-space: nowrap;
+}
+.tag.live {
+  color: var(--green);
+  border-color: currentColor;
+  font-weight: 550;
+}
+.tag.ask a { color: var(--ink); text-decoration: none; }
+.tag.ask a:hover { text-decoration: underline; }
+
 /* ── product specs ── */
 .product {
   max-width: 880px;
