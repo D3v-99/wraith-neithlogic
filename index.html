@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wraith — Sell access on WhatsApp. Automatically.</title>
+  <meta name="description" content="Wraith turns any WhatsApp group into a subscription business. Payments, access, expiry — handled by a ghost." />
+  <meta property="og:title" content="Wraith" />
+  <meta property="og:description" content="Sell access on WhatsApp. Automatically." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://api.neithlogic.com" crossorigin />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+  <div class="mist" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="brand" href="#top">
+      <svg class="mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+        <path d="M 32 8 A 24 24 0 1 0 55.4 26.6" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+        <circle cx="53" cy="15.5" r="4.4" fill="currentColor"/>
+        <circle cx="42.5" cy="8.6" r="3.2" fill="currentColor"/>
+      </svg>
+      <span>wraith</span>
+    </a>
+    <nav>
+      <a href="#how">How</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#start" class="nav-cta">Start</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <p class="kicker">// subscription infrastructure for WhatsApp</p>
+      <h1>Sell access.<br /><em>Vanish</em> from the busywork.</h1>
+      <p class="sub">
+        Wraith turns any WhatsApp group into a paid membership.
+        It collects payment, lets members in, and removes them when time runs out —
+        silently, around the clock.
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="#pricing">See pricing</a>
+        <a class="btn ghost" href="#how">How it works</a>
+      </div>
+    </section>
+
+    <section class="strip" aria-hidden="true">
+      <div class="strip-track">
+        <span>no manual payment tracking</span><span>◦</span>
+        <span>no chasing expired members</span><span>◦</span>
+        <span>no spreadsheets</span><span>◦</span>
+        <span>M-Pesa &amp; card, built in</span><span>◦</span>
+        <span>no manual payment tracking</span><span>◦</span>
+        <span>no chasing expired members</span><span>◦</span>
+        <span>no spreadsheets</span><span>◦</span>
+        <span>M-Pesa &amp; card, built in</span><span>◦</span>
+      </div>
+    </section>
+
+    <section class="how" id="how">
+      <h2>Three moves. Then it runs itself.</h2>
+      <ol class="steps">
+        <li>
+          <span class="step-n">01</span>
+          <h3>They message the bot</h3>
+          <p>A customer texts your WhatsApp number. Wraith replies with your plans and a payment link — M-Pesa or card, powered by Paystack.</p>
+        </li>
+        <li>
+          <span class="step-n">02</span>
+          <h3>Payment confirms itself</h3>
+          <p>The webhook lands, the subscription is written, and the member receives their invite to your private group. No human in the loop.</p>
+        </li>
+        <li>
+          <span class="step-n">03</span>
+          <h3>Expiry is enforced</h3>
+          <p>When time runs out, Wraith removes them from the group — politely, automatically. They can renew with one message.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <h3>Ghost-quiet automation</h3>
+        <p>The entire lifecycle — sell, admit, remind, remove — happens without you opening the app.</p>
+      </div>
+      <div class="feature">
+        <h3>One dashboard</h3>
+        <p>Plans, payments, members, and broadcasts managed from a single admin panel.</p>
+      </div>
+      <div class="feature">
+        <h3>Kenya-ready payments</h3>
+        <p>M-Pesa and card checkout out of the box. Money lands in your Paystack account.</p>
+      </div>
+      <div class="feature">
+        <h3>Telegram too</h3>
+        <p>The same engine runs paid Telegram channels — one platform, both apps.</p>
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <h2>Pricing</h2>
+      <p class="pricing-sub">Live from the platform. What you see is what the bot sells.</p>
+      <div class="plans" id="plans">
+        <div class="plan skeleton" aria-hidden="true"></div>
+        <div class="plan skeleton" aria-hidden="true"></div>
+        <div class="plan skeleton" aria-hidden="true"></div>
+      </div>
+      <p class="plans-error" id="plans-error" hidden>Plans are hiding right now. Try again shortly.</p>
+    </section>
+
+    <section class="cta" id="start">
+      <h2>Put a ghost to work.</h2>
+      <p>Message the bot and it takes it from there.</p>
+      <a class="btn big" id="cta-whatsapp" href="#" rel="noopener">Chat on WhatsApp</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="foot-brand">
+      <svg class="mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+        <path d="M 32 8 A 24 24 0 1 0 55.4 26.6" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+        <circle cx="53" cy="15.5" r="4.4" fill="currentColor"/>
+        <circle cx="42.5" cy="8.6" r="3.2" fill="currentColor"/>
+      </svg>
+      <span>wraith</span>
+    </div>
+    <p>© 2026 Neithlogic · wraith.neithlogic.com</p>
+  </footer>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>

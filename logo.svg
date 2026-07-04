@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Wraith mark: a ring dissolving into signal -->
+  <path d="M 32 8 A 24 24 0 1 0 55.4 26.6" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="53" cy="15.5" r="4.4" fill="currentColor"/>
+  <circle cx="42.5" cy="8.6" r="3.2" fill="currentColor"/>
+</svg>
