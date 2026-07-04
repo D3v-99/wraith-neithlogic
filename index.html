@@ -3,132 +3,145 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wraith — Sell access on WhatsApp. Automatically.</title>
-  <meta name="description" content="Wraith turns any WhatsApp group into a subscription business. Payments, access, expiry — handled by a ghost." />
-  <meta property="og:title" content="Wraith" />
-  <meta property="og:description" content="Sell access on WhatsApp. Automatically." />
+  <title>Wraith — Bank jobs in Kenya, delivered daily</title>
+  <meta name="description" content="Wraith monitors the career pages of 38 Kenyan banks every night, filters out the noise, and delivers a clean digest of new job postings to WhatsApp by 7 AM." />
+  <meta property="og:title" content="Wraith by Neithlogic" />
+  <meta property="og:description" content="Every bank job in Kenya. In your pocket by 7 AM." />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="preconnect" href="https://api.neithlogic.com" crossorigin />
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
 
-  <div class="mist" aria-hidden="true"></div>
-
   <header class="nav">
-    <a class="brand" href="#top">
+    <a class="brand" href="/">
       <svg class="mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
         <path d="M 32 8 A 24 24 0 1 0 55.4 26.6" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
         <circle cx="53" cy="15.5" r="4.4" fill="currentColor"/>
         <circle cx="42.5" cy="8.6" r="3.2" fill="currentColor"/>
       </svg>
-      <span>wraith</span>
+      Wraith
     </a>
     <nav>
-      <a href="#how">How</a>
+      <a href="#product">Product</a>
       <a href="#pricing">Pricing</a>
-      <a href="#start" class="nav-cta">Start</a>
+      <a class="nav-cta" href="mailto:admin@neithlogic.com">Contact</a>
     </nav>
   </header>
 
-  <main id="top">
+  <main>
 
     <section class="hero">
-      <p class="kicker">// subscription infrastructure for WhatsApp</p>
-      <h1>Sell access.<br /><em>Vanish</em> from the busywork.</h1>
-      <p class="sub">
-        Wraith turns any WhatsApp group into a paid membership.
-        It collects payment, lets members in, and removes them when time runs out —
-        silently, around the clock.
+      <p class="eyebrow">A Neithlogic product</p>
+      <h1>Every bank job in Kenya.<br />In your pocket by 7&nbsp;AM.</h1>
+      <p class="lede">
+        Wraith reads the career pages of 38 banks every night, separates
+        real openings from the noise, and sends one clean digest to WhatsApp.
+        You never refresh a careers page again.
       </p>
-      <div class="hero-actions">
-        <a class="btn" href="#pricing">See pricing</a>
-        <a class="btn ghost" href="#how">How it works</a>
+      <div class="actions">
+        <a class="btn" href="mailto:admin@neithlogic.com">Request access</a>
+        <a class="link-btn" href="#product">How it works &rarr;</a>
       </div>
     </section>
 
-    <section class="strip" aria-hidden="true">
-      <div class="strip-track">
-        <span>no manual payment tracking</span><span>◦</span>
-        <span>no chasing expired members</span><span>◦</span>
-        <span>no spreadsheets</span><span>◦</span>
-        <span>M-Pesa &amp; card, built in</span><span>◦</span>
-        <span>no manual payment tracking</span><span>◦</span>
-        <span>no chasing expired members</span><span>◦</span>
-        <span>no spreadsheets</span><span>◦</span>
-        <span>M-Pesa &amp; card, built in</span><span>◦</span>
+    <section class="phone-wrap" aria-label="Example of the daily digest">
+      <div class="phone">
+        <div class="phone-head">
+          <div class="phone-avatar" aria-hidden="true">W</div>
+          <div>
+            <div class="phone-name">Wraith Digest</div>
+            <div class="phone-status">today, 07:00</div>
+          </div>
+        </div>
+        <div class="phone-body">
+          <div class="bubble">
+            <p class="bubble-title">Bank Jobs — Thursday</p>
+            <p class="bubble-meta">14 new postings across 9 banks</p>
+            <div class="bubble-job"><span>KCB</span>Senior Credit Analyst — Nairobi</div>
+            <div class="bubble-job"><span>Absa</span>DevOps Engineer</div>
+            <div class="bubble-job"><span>NCBA</span>Relationship Manager, SME</div>
+            <div class="bubble-job"><span>Stanbic</span>Data Scientist, Risk</div>
+            <div class="bubble-more">+ 10 more roles</div>
+            <p class="bubble-time">07:00</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="how" id="how">
-      <h2>Three moves. Then it runs itself.</h2>
-      <ol class="steps">
-        <li>
-          <span class="step-n">01</span>
-          <h3>They message the bot</h3>
-          <p>A customer texts your WhatsApp number. Wraith replies with your plans and a payment link — M-Pesa or card, powered by Paystack.</p>
-        </li>
-        <li>
-          <span class="step-n">02</span>
-          <h3>Payment confirms itself</h3>
-          <p>The webhook lands, the subscription is written, and the member receives their invite to your private group. No human in the loop.</p>
-        </li>
-        <li>
-          <span class="step-n">03</span>
-          <h3>Expiry is enforced</h3>
-          <p>When time runs out, Wraith removes them from the group — politely, automatically. They can renew with one message.</p>
-        </li>
-      </ol>
+    <section class="product" id="product">
+      <div class="spec">
+        <div class="spec-num">01</div>
+        <div class="spec-body">
+          <h2>It reads everything</h2>
+          <p>
+            Every night Wraith crawls the career pages of 38 Kenyan banks —
+            plus the applicant systems behind them: Workday, Oracle HCM,
+            SmartRecruiters and others. Landing pages get crawled a level
+            deeper, so listings buried behind &ldquo;Career Opportunities&rdquo;
+            links are found too.
+          </p>
+        </div>
+      </div>
+
+      <div class="spec">
+        <div class="spec-num">02</div>
+        <div class="spec-body">
+          <h2>It knows what a job is</h2>
+          <p>
+            Bank websites are noisy — board profiles, internet-banking portals,
+            press releases, product pages. Wraith&rsquo;s classifier scores every
+            link against dozens of signals and hard-vetoes the noise. What
+            survives is an actual opening with an actual title.
+          </p>
+        </div>
+      </div>
+
+      <div class="spec">
+        <div class="spec-num">03</div>
+        <div class="spec-body">
+          <h2>It delivers, then disappears</h2>
+          <p>
+            One message, every morning at 07:00, in a private WhatsApp group.
+            New postings only — deduplicated against everything already sent.
+            No app to install, no inbox to manage, nothing to check twice.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <section class="features">
-      <div class="feature">
-        <h3>Ghost-quiet automation</h3>
-        <p>The entire lifecycle — sell, admit, remind, remove — happens without you opening the app.</p>
-      </div>
-      <div class="feature">
-        <h3>One dashboard</h3>
-        <p>Plans, payments, members, and broadcasts managed from a single admin panel.</p>
-      </div>
-      <div class="feature">
-        <h3>Kenya-ready payments</h3>
-        <p>M-Pesa and card checkout out of the box. Money lands in your Paystack account.</p>
-      </div>
-      <div class="feature">
-        <h3>Telegram too</h3>
-        <p>The same engine runs paid Telegram channels — one platform, both apps.</p>
-      </div>
+    <section class="figures" aria-label="Key numbers">
+      <div class="figure"><strong>38</strong><span>banks monitored</span></div>
+      <div class="figure"><strong>07:00</strong><span>daily delivery, EAT</span></div>
+      <div class="figure"><strong>1</strong><span>message a day</span></div>
+      <div class="figure"><strong>0</strong><span>careers pages to check</span></div>
     </section>
 
     <section class="pricing" id="pricing">
-      <h2>Pricing</h2>
-      <p class="pricing-sub">Live from the platform. What you see is what the bot sells.</p>
+      <h2>Access</h2>
+      <p class="pricing-lede">
+        Membership to the digest group is paid. Plans below are live from the
+        platform — pay with M-Pesa or card, access starts the moment
+        payment lands.
+      </p>
       <div class="plans" id="plans">
-        <div class="plan skeleton" aria-hidden="true"></div>
-        <div class="plan skeleton" aria-hidden="true"></div>
-        <div class="plan skeleton" aria-hidden="true"></div>
+        <div class="plan-row skeleton" aria-hidden="true"></div>
+        <div class="plan-row skeleton" aria-hidden="true"></div>
+        <div class="plan-row skeleton" aria-hidden="true"></div>
       </div>
-      <p class="plans-error" id="plans-error" hidden>Plans are hiding right now. Try again shortly.</p>
+      <p class="plans-error" id="plans-error" hidden>Couldn&rsquo;t load plans right now — try again in a minute.</p>
     </section>
 
-    <section class="cta" id="start">
-      <h2>Put a ghost to work.</h2>
-      <p>Message the bot and it takes it from there.</p>
-      <a class="btn big" id="cta-whatsapp" href="#" rel="noopener">Chat on WhatsApp</a>
+    <section class="closer">
+      <h2>The jobs are out there.<br />Wraith finds them while you sleep.</h2>
+      <a class="btn" href="mailto:admin@neithlogic.com">Request access</a>
     </section>
 
   </main>
 
   <footer>
-    <div class="foot-brand">
-      <svg class="mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-        <path d="M 32 8 A 24 24 0 1 0 55.4 26.6" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
-        <circle cx="53" cy="15.5" r="4.4" fill="currentColor"/>
-        <circle cx="42.5" cy="8.6" r="3.2" fill="currentColor"/>
-      </svg>
-      <span>wraith</span>
-    </div>
-    <p>© 2026 Neithlogic · wraith.neithlogic.com</p>
+    <p><strong>Wraith</strong> is built by <a href="https://neithlogic.com">Neithlogic</a>.</p>
+    <p><a href="mailto:admin@neithlogic.com">admin@neithlogic.com</a> · © 2026 Neithlogic</p>
   </footer>
 
   <script src="/app.js" defer></script>

@@ -1,11 +1,6 @@
-// Wraith marketing site — fetches live plans from the platform API.
+// Wraith product site — renders live plans from the Neithlogic platform API.
 
 const API = 'https://api.neithlogic.com';
-
-// Set this to your bot's WhatsApp number link, e.g. https://wa.me/2547XXXXXXXX
-const WHATSAPP_LINK = 'https://wa.me/254737327387';
-
-document.getElementById('cta-whatsapp').href = WHATSAPP_LINK;
 
 function humanDuration(minutes) {
   if (minutes % 43200 === 0) { const m = minutes / 43200; return m === 1 ? '1 month' : `${m} months`; }
@@ -34,7 +29,7 @@ function esc(s) {
 }
 
 async function loadPlans() {
-  const grid = document.getElementById('plans');
+  const list = document.getElementById('plans');
   const errEl = document.getElementById('plans-error');
   try {
     const res = await fetch(`${API}/public/plans`);
@@ -42,16 +37,15 @@ async function loadPlans() {
     const { plans } = await res.json();
     if (!plans.length) throw new Error('no plans');
 
-    grid.innerHTML = plans.map((p) => `
-      <div class="plan">
+    list.innerHTML = plans.map((p) => `
+      <div class="plan-row">
         <span class="plan-name">${esc(p.name)}</span>
-        <div class="plan-price">${formatAmount(p.amount, p.currency)}</div>
-        <div class="plan-duration">${humanDuration(p.durationMinutes)} of access</div>
-        ${p.description ? `<div class="plan-desc">${esc(p.description)}</div>` : ''}
+        <span class="plan-desc">${esc(p.description || '')}</span>
+        <span class="plan-price">${formatAmount(p.amount, p.currency)} <small>/ ${humanDuration(p.durationMinutes)}</small></span>
       </div>
     `).join('');
   } catch {
-    grid.innerHTML = '';
+    list.innerHTML = '';
     errEl.hidden = false;
   }
 }
