@@ -51,3 +51,45 @@ async function loadPlans() {
 }
 
 loadPlans();
+
+// Industries — live from the platform's source registry
+const INDUSTRY_LABELS = {
+  banking: 'Banking & finance',
+  insurance: 'Insurance',
+  telecom: 'Telecom',
+  energy: 'Energy & utilities',
+  ngo: 'NGOs & development'
+};
+const COMING = ['Energy & utilities', 'NGOs & development'];
+
+async function loadIndustries() {
+  try {
+    const res = await fetch(`${API}/public/industries`);
+    if (!res.ok) return; // keep static fallback
+    const { industries } = await res.json();
+    if (!industries || !industries.length) return;
+
+    const list = document.getElementById('industry-list');
+    const liveNames = new Set();
+    let html = '';
+    for (const i of industries) {
+      const label = INDUSTRY_LABELS[i.industry] || (i.industry.charAt(0).toUpperCase() + i.industry.slice(1));
+      liveNames.add(label);
+      const noun = i.industry === 'banking' ? 'institutions' : 'sources';
+      html += `<li><span class="industry-name">${esc(label)}</span><span class="tag live">Live — ${i.sources} ${noun}</span></li>`;
+    }
+    for (const label of COMING) {
+      if (liveNames.has(label)) continue;
+      html += `<li><span class="industry-name">${esc(label)}</span><span class="tag">Coming</span></li>`;
+    }
+    html += `<li><span class="industry-name">Your industry</span><span class="tag ask"><a href="mailto:admin@neithlogic.com">Ask us</a></span></li>`;
+    list.innerHTML = html;
+
+    // keep the "sources live today" figure honest too
+    const total = industries.reduce((s, i) => s + i.sources, 0);
+    const fig = document.querySelector('.figures .figure strong');
+    if (fig) fig.textContent = String(total);
+  } catch { /* static fallback stays */ }
+}
+
+loadIndustries();
