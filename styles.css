@@ -472,3 +472,77 @@ footer a:hover { text-decoration: underline; }
   .actions .btn { font-size: 14px; }
   .figures { grid-template-columns: 1fr; }
 }
+
+/* ── split product feeds (jobs / tenders) ── */
+.split-intro {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 90px 32px 20px;
+  text-align: center;
+}
+.split-intro h2 {
+  font-family: var(--serif);
+  font-weight: 550;
+  font-size: clamp(26px, 4vw, 38px);
+  letter-spacing: -0.015em;
+  margin-top: 12px;
+}
+.feed {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 60px 32px;
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 64px;
+  align-items: center;
+}
+.feed-tag {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--green);
+  margin-bottom: 14px;
+}
+.feed-text h2 {
+  font-family: var(--serif);
+  font-weight: 550;
+  font-size: clamp(26px, 3.5vw, 34px);
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+}
+.feed-text > p {
+  color: var(--muted);
+  font-size: 16.5px;
+  margin-top: 18px;
+  max-width: 520px;
+}
+.feed-points {
+  list-style: none;
+  margin-top: 22px;
+  padding: 0;
+}
+.feed-points li {
+  position: relative;
+  padding-left: 24px;
+  margin: 10px 0;
+  font-size: 15px;
+}
+.feed-points li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--green);
+}
+.feed-visual { display: flex; justify-content: center; }
+
+/* tender bubble bits */
+.bubble-tender-title { font-weight: 650; font-size: 13.5px; margin-top: 8px; line-height: 1.35; }
+.bubble-tender-meta { color: var(--muted); font-size: 12.5px; margin-top: 2px; }
+.bubble-rule { height: 1px; background: #f0ede6; margin: 12px 0; }
+
+@media (max-width: 820px) {
+  .feed { grid-template-columns: 1fr; gap: 36px; padding: 44px 20px; }
+  /* on mobile, always show text first then phone */
+  .feed-alt .feed-visual { order: 2; }
+  .feed-alt .feed-text { order: 1; }
+  .split-intro { padding: 64px 20px 8px; }
+}
