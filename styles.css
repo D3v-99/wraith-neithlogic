@@ -548,27 +548,74 @@ footer a:hover { text-decoration: underline; }
 }
 
 /* ── Groups ──────────────────────────────────────────────────────────────── */
-.groups { padding: 96px 0; border-top: 1px solid var(--line); }
-.groups-lede { color: var(--muted); max-width: 54ch; margin-top: 12px; font-size: 16.5px; line-height: 1.65; }
-.group-list { list-style: none; margin-top: 44px; }
+/* Same container as .industries: the page has no global wrapper, each
+   section owns its width and 32px gutters. */
+.groups {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 120px 32px 20px;
+}
+.groups h2 {
+  font-family: var(--serif);
+  font-weight: 550;
+  font-size: clamp(30px, 4vw, 40px);
+  letter-spacing: -0.015em;
+}
+.groups-lede {
+  color: var(--muted);
+  margin-top: 16px;
+  max-width: 540px;
+}
+.group-list {
+  list-style: none;
+  margin-top: 44px;
+}
 .group-list li {
-  display: flex; align-items: center; justify-content: space-between; gap: 24px;
-  padding: 20px 0; border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 4px;
+  border-top: 1px solid var(--line);
 }
 .group-list li:last-child { border-bottom: 1px solid var(--line); }
-.group-copy { display: flex; flex-direction: column; gap: 5px; }
-.group-name { font-weight: 550; font-size: 16.5px; }
-.group-blurb { color: var(--muted); font-size: 14.5px; line-height: 1.5; }
-.group-join {
-  flex: none; text-decoration: none; white-space: nowrap;
-  border: 1px solid var(--ink); border-radius: 999px;
-  padding: 9px 20px; font-size: 14.5px; font-weight: 550; color: var(--ink);
+
+.group-copy { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.group-name {
+  display: flex;
+  align-items: flex-start;   /* keeps the icon on the first line when the name wraps */
+  gap: 10px;
+  font-weight: 550;
+  font-size: 16px;
 }
-.group-join:hover { background: var(--ink); color: var(--paper); }
-.groups-foot { margin-top: 28px; color: var(--muted); font-size: 15px; }
+.group-icon {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  margin-top: 2px;           /* optical centring against the cap height */
+  color: var(--green);
+}
+.group-blurb {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.group-join {
+  flex: none;
+  font-size: 12.5px;
+  font-weight: 550;
+  color: var(--green);
+  border: 1px solid currentColor;
+  border-radius: 100px;
+  padding: 3px 14px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.group-join:hover { background: var(--green); color: var(--paper); }
+.groups-foot { margin-top: 24px; color: var(--muted); font-size: 14.5px; }
 .groups-foot a { color: var(--green); }
 
 @media (max-width: 560px) {
-  .group-list li { flex-direction: column; align-items: flex-start; gap: 12px; }
-  .group-join { align-self: stretch; text-align: center; }
+  .group-list li { align-items: flex-start; gap: 14px; }
+  .group-blurb { font-size: 13.5px; }
 }
