@@ -546,3 +546,29 @@ footer a:hover { text-decoration: underline; }
   .feed-alt .feed-text { order: 1; }
   .split-intro { padding: 64px 20px 8px; }
 }
+
+/* ── Groups ──────────────────────────────────────────────────────────────── */
+.groups { padding: 96px 0; border-top: 1px solid var(--line); }
+.groups-lede { color: var(--muted); max-width: 54ch; margin-top: 12px; font-size: 16.5px; line-height: 1.65; }
+.group-list { list-style: none; margin-top: 44px; }
+.group-list li {
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  padding: 20px 0; border-top: 1px solid var(--line);
+}
+.group-list li:last-child { border-bottom: 1px solid var(--line); }
+.group-copy { display: flex; flex-direction: column; gap: 5px; }
+.group-name { font-weight: 550; font-size: 16.5px; }
+.group-blurb { color: var(--muted); font-size: 14.5px; line-height: 1.5; }
+.group-join {
+  flex: none; text-decoration: none; white-space: nowrap;
+  border: 1px solid var(--ink); border-radius: 999px;
+  padding: 9px 20px; font-size: 14.5px; font-weight: 550; color: var(--ink);
+}
+.group-join:hover { background: var(--ink); color: var(--paper); }
+.groups-foot { margin-top: 28px; color: var(--muted); font-size: 15px; }
+.groups-foot a { color: var(--green); }
+
+@media (max-width: 560px) {
+  .group-list li { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .group-join { align-self: stretch; text-align: center; }
+}
