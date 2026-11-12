@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Open roles in Kenya — The Wraith Project job board</title>
+  <meta name="description" content="Every open role Wraith has posted to its free WhatsApp groups in the last three weeks — banking, fintech, legal, HR, tax &amp; audit, data &amp; AI, procurement, project management, tech and internships. Updated every morning." />
+  <link rel="canonical" href="https://wraith.neithlogic.com/jobs" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#faf9f6" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://wraith.neithlogic.com/jobs" />
+  <meta property="og:site_name" content="The Wraith Project" />
+  <meta property="og:title" content="Open roles in Kenya — Wraith job board" />
+  <meta property="og:description" content="Open roles from Kenyan career pages and job boards, sorted by field. Updated every morning." />
+  <meta property="og:image" content="https://wraith.neithlogic.com/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script defer src="/jobs.js"></script>
+</head>
+<body>
+
+  <header class="nav">
+    <a class="brand" href="/">
+      <svg class="mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+        <path d="M 32 8 A 24 24 0 1 0 55.4 26.6" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+        <circle cx="53" cy="15.5" r="4.4" fill="currentColor"/>
+        <circle cx="42.5" cy="8.6" r="3.2" fill="currentColor"/>
+      </svg>
+      Wraith
+    </a>
+    <nav>
+      <a href="/#jobs">How it works</a>
+      <a href="/#groups">Groups</a>
+      <a href="/jobs" aria-current="page">Jobs</a>
+      <a class="nav-cta" href="mailto:admin@neithlogic.com">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="board">
+      <p class="eyebrow">Job board</p>
+      <h1>Open roles, sorted by field.</h1>
+      <p class="board-lede">
+        Every opening the Wraith groups have received in the last three weeks
+        that is still open &mdash; from company career pages and Kenya&rsquo;s job
+        boards, checked and deduplicated. New roles land every morning from
+        6:30&nbsp;AM.
+      </p>
+
+      <div class="field-tabs" id="field-tabs" role="group" aria-label="Filter by field">
+        <button type="button" class="field-tab" aria-pressed="true" data-field="all">All</button>
+      </div>
+
+      <div class="board-filters">
+        <label class="board-search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg>
+          <span class="visually-hidden">Search roles</span>
+          <input id="board-q" type="search" placeholder="Search title or employer" autocomplete="off" />
+        </label>
+        <div class="segmented" role="group" aria-label="Location">
+          <button type="button" aria-pressed="true" data-region="all">Anywhere</button>
+          <button type="button" aria-pressed="false" data-region="kenya">Kenya</button>
+          <button type="button" aria-pressed="false" data-region="international">Remote</button>
+        </div>
+      </div>
+
+      <p class="board-count" id="board-count" aria-live="polite">Loading open roles&hellip;</p>
+
+      <ul class="job-list" id="job-list">
+        <li class="job-row skeleton" aria-hidden="true"></li>
+        <li class="job-row skeleton" aria-hidden="true"></li>
+        <li class="job-row skeleton" aria-hidden="true"></li>
+        <li class="job-row skeleton" aria-hidden="true"></li>
+      </ul>
+
+      <button type="button" class="link-btn board-more" id="board-more" hidden>Show more roles</button>
+
+      <aside class="board-cta" id="board-cta">
+        <div>
+          <p class="board-cta-title" id="board-cta-title">Get new roles every morning</p>
+          <p class="board-cta-text" id="board-cta-text">Join a free WhatsApp group and the next batch comes to you at 6:30&nbsp;AM.</p>
+        </div>
+        <a class="btn" id="board-cta-link" href="/#groups">Join a group</a>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>The Wraith Project</strong> is built by <a href="https://neithlogic.com">Neithlogic</a>.</p>
+    <p>Links go to the employer or the board that listed the role. Always apply there, and never pay to apply.</p>
+  </footer>
+
+</body>
+</html>
