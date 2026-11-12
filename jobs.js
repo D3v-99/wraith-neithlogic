@@ -5,6 +5,7 @@
   'use strict';
 
   var API = 'https://api.neithlogic.com/public/jobs';
+  var CLICK = 'https://api.neithlogic.com/public/click';
   var PAGE = 40;
   var MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
@@ -94,7 +95,13 @@
     var copy = el('div', 'job-copy');
 
     var title = url ? el('a', 'job-title', j.title) : el('span', 'job-title', j.title);
-    if (url) { title.href = url; title.target = '_blank'; title.rel = 'noopener noreferrer nofollow'; }
+    if (url) {
+      title.href = url; title.target = '_blank'; title.rel = 'noopener noreferrer nofollow';
+      // Counts the tap for the admin dashboard; the link itself goes straight to the employer.
+      if (j.db && j.id) title.addEventListener('click', function () {
+        try { fetch(CLICK + '?d=' + encodeURIComponent(j.db) + '&id=' + encodeURIComponent(j.id), { keepalive: true, mode: 'no-cors' }); } catch (e) { /* never block the link */ }
+      });
+    }
     copy.appendChild(title);
 
     var where = j.region === 'international' ? 'Remote' : (j.location || 'Kenya');
